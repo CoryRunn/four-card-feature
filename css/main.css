@@ -173,6 +173,7 @@ section {
     border-radius: 7px;
     border-top: 4px solid transparent;
     background-color: hsl(0, 0%, 100%);
+    box-shadow: 5px 10px 15px lightgray;
     margin: 40px 0;
 }
 
@@ -298,28 +299,45 @@ footer {
    Modify as content requires.
    ========================================================================== */
 
+/***Tablet***/
 @media only screen and (min-width: 768px) {
   /* Style adjustments for viewports that meet the condition */
 
   main {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      min-width: 768px;
-  }
+    display:grid;
+    grid-template-columns: 375px 375px;
+    grid-row: auto auto;
+    
+  }  
 
   section {
     margin: 10px;
     max-width: 375px;
   }
-  
- .card-push {
-     transform: translateY(50%);
- }
 
  footer {
      margin-top: 150px;
  }
+
+}
+
+/***Desktop***/
+@media only screen and (min-width: 1200px) {
+
+  main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  section {
+    margin-bottom: 15px;
+  }
+
+  .card-push {
+    transform: translateY(50%);
+  }
+
 }
 
 @media print,
